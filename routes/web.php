@@ -23,6 +23,11 @@ Route::group(['namespace' => 'Web'], function () {
         Route::get('/', 'BlogController@index');
         Route::get('/list', 'BlogController@list');
         Route::get('/detail/{id}', 'BlogController@detail');
+        Route::get('/work', 'NavController@work');
+        Route::get('/tourism', 'NavController@tourism');
+        Route::get('/food', 'NavController@food');
+        Route::get('/photo', 'NavController@photo');
+        Route::get('/about', 'NavController@about');
     });
 
     /**
