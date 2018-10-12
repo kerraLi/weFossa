@@ -19,12 +19,28 @@ class BlogController extends Controller
      */
     public function index()
     {
-
-        return view('web.blog.index');
+        $pages = config('blog.pages');
+        return view('web.blog.index', [
+            'pages' => $pages
+        ]);
     }
 
     /**
-     * 博客列表页
+     * 博客二级分类域名
+     */
+    public function page($page)
+    {
+        $pages = config('blog.pages');
+        $code = $page;
+        $page = $pages[$code];
+        return view('web.blog.page', [
+            'code' => $code,
+            'page' => $page
+        ]);
+    }
+
+    /**
+     * 博客列表
      */
     public function list()
     {

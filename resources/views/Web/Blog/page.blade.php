@@ -4,5 +4,5 @@
 
 
 @section('container')
-    模范夫妻
+    {{ $page['name'] }}
 @endsection
