@@ -10,6 +10,10 @@
     <link href="{{ asset('js/app.js') }}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<div class="header">
+    <a href="{{ url('/login') }}">登陆</a>
+    <a href="{{ url('/register') }}">注册</a>
+</div>
 @section('container')
     这里是侧边栏
 @show

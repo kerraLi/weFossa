@@ -9,6 +9,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -34,8 +35,12 @@ class HomeController extends Controller
     /**
      * 注册
      */
-    public function register()
+    public function register(Request $request)
     {
+        if($request->method() == 'post'){
+            $username = $request->input('username');
+            $password = $request->input('password');
+        }
         return view('web.home.register');
     }
 
